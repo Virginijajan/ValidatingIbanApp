@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "IBAN validating";
+}
+
+<div class="text-left">
+    <h4>@ViewData["Title"]</h4>
+    <form asp-page="Index">
+        <div class="form-group">
+            <label asp-for="IBAN"></label>
+            <input class="form-control" asp-for="IBAN" />
+            <span asp-validation-for="IBAN"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <h4>@Model.IbanIsValid </h4>
+</div>
