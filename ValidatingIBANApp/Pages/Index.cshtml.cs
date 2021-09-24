@@ -16,7 +16,8 @@ namespace ValidatingIBANApp.Pages
         [BindProperty]
         [Display(Name = "IBAN")]
         [Required]
-        [MaxLength(20, ErrorMessage = "Max length is 20 characters")]
+        [MaxLength(34, ErrorMessage = "Max length is 20 characters")]
+        [MinLength(5, ErrorMessage ="Min length is 5 characters")]
         public string IBAN { get; set; }
         public void OnGet()
         {         
